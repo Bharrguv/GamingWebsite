@@ -1,3 +1,6 @@
+created by:- 188.Bharrguv Vakharia,217.Hradhay Yagnik,226.Ashish Rajput                             UNREAL GAMES
+
+Website Description:
 In the first image, we see a well-designed homepage of a gaming website. At the top, there is a large banner featuring Halo Infinite Multiplayer, which likely draws attention as a featured game. Below the banner is a *"Trending Games"* section showcasing popular titles such as Hitman 3, The Witcher 3: Wild Hunt, and Minecraft: Caves and Cliffs. Each game in this section is labeled as *Action* and displays a high user rating of *4.7 stars*. This homepage emphasizes the sleek, modern layout with an intuitive search bar and a visually appealing dark color scheme to enhance the vibrant game covers.
 
 Further down on the first screen, a *"New Section"* highlights more games, suggesting recently added or new releases on the platform. Titles like Dying Light 2, God of War, Horizon Forbidden West, and Assassin's Creed Valhalla are presented, all with the same 4.7-star rating. This section likely targets users looking for fresh content, providing easy access to the latest popular games. The layout continues with a grid format, offering a clean and organized presentation of game covers, titles, genres, and ratings.
