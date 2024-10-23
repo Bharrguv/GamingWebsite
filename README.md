@@ -1,4 +1,6 @@
-created by:- 188.Bharrguv Vakharia,217.Hradhay Yagnik,226.Ashish Rajput                             UNREAL GAMES
+UNREAL GAMES  
+
+created by:- 188.Bharrguv Vakharia,217.Hradhay Yagnik,226.Ashish Rajput                                                             
 
 Website Description:
 In the first image, we see a well-designed homepage of a gaming website. At the top, there is a large banner featuring Halo Infinite Multiplayer, which likely draws attention as a featured game. Below the banner is a *"Trending Games"* section showcasing popular titles such as Hitman 3, The Witcher 3: Wild Hunt, and Minecraft: Caves and Cliffs. Each game in this section is labeled as *Action* and displays a high user rating of *4.7 stars*. This homepage emphasizes the sleek, modern layout with an intuitive search bar and a visually appealing dark color scheme to enhance the vibrant game covers.
