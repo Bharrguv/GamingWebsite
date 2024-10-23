@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Games website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <style>
+        /* Internal CSS */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .home {
+            position: relative;
+            overflow: hidden;
+            height: 60vh; /* Adjust height as needed */
+        }
+
+        .home img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the whole section */
+            position: absolute; /* Position images absolutely for layering */
+            top: 0; /* Align top */
+            left: 0; /* Align left */
+            opacity: 0; /* Start with hidden images */
+            transition: opacity 1s ease; /* Smooth transition */
+        }
+
+        .home img.active {
+            opacity: 1; /* Show active image */
+        }
+
+        .home-text {
+            position: absolute;
+            bottom: 20px;
+            right: 20px; /* Align to bottom right */
+            text-align: center;
+        }
+
+        .btn {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 10px 20px; /* Increased padding for a larger button */
+            border-radius: 25px; /* Rounded corners */
+            font-size: 16px; /* Increased font size */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 250px; /* Set fixed width */
+        }
+
+        .btn:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- custom scroll bar  -->
+     <div class="progress">
+        <div class="progress-bar" id="scroll-bar"></div>
+     </div>
+    <!-- header -->
+     <header>
+        <!-- nav -->
+         <div class="nav container">
+
+            <!--LOGO-->
+            <a href="index.html" class="logo">
+                <img src="UNREAL GAMES LOGO.png" alt="Unreal Games Logo" style="height: 60px;">
+            </a>
+            
+            <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search games..." />
+            <button class="search-btn">
+                <i class='bx bx-search'></i>
+            </button>
+        </div>
+              <!-- Nav Icons -->
+             <div class="nav-icons">
+                <i class='bx bx-bell bx-tada' id="bell-icon"></i>
+                <i class='bx bxs-download' ></i>
+                <div class="menu-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    
+                </div>
+             </div>
+
+
+            <!-- menu -->
+             <div class="menu">
+                <img src="menu.png" alt="menuImage">
+                <div class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">SignUp</a></li>
+                    <li><a href="#trending">Trending</a></li>
+
+                    <li><a href="#new">New Games</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </div>
+             </div>
+             <!-- notification -->
+              <div class="notification">
+                <div class="notification-box">
+                    <i class='bx bxs-check-circle' ></i>
+                    <p>Congratulation, your game downloaded successfully</p> 
+                </div>
+                <div class="notification-box box-color">
+                    <i class='bx bxs-x-circle'></i>
+                    <p>Could not apply changes</p>
+                </div>
+              </div>
+
+         </div>
+     </header>
+
+     
+
+
+ <!-- Available Now -->
+          
+       <section class="new container" id="new">
+
+        <div class="heading">
+            <!-- <i class='bx bx-game' ></i> -->
+            <i class='bx bxs-game' ></i>
+            <h2>Available Now</h2>
+        </div>
+            <!-- content -->
+             <div class="new-content">
+                <!-- box 1 -->
+                <div class="box">
+                    <img src="https://myhotposters.com/cdn/shop/products/mL5981_1024x1024.jpg?v=1643974595
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2>Dying Light 2 Stay Human</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download1.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <!-- box 2 -->
+                  <div class="box">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202109/2821/SZRc7OMwGgv8lJXIOlYyuBU2.jpg
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2>God of War</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download2.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <!-- box 3 -->
+                  <div class="box">
+                    <img src="https://gamerheadquarters.com/hub/playstation/horizon/forbiddenwest.jpg" alt="image1">
+                    <div class="box-text">
+                        <h2>Horizon Forbidden West</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download3.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                  <!-- box 4 -->
+                  <div class="box">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNTFmN2M0MGMtMTI5Ny00NzRlLWFlZGYtZDM0N2VmOTUwYTdmXkEyXkFqcGc@.V1_FMjpg_UX1000.jpg
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2>Uncharted 4 Thiefs End</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download4.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <!-- box 5 -->
+                  <div class="box">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/f/ff/Assassin%27s_Creed_Valhalla_cover.jpg
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2> Assassin's Creed Valhalla</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download5.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <!-- box 6 -->
+                  <div class="box">
+                    <img src="https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s4-1200x1600-7ee40d6fa744_1200x1600-950cdb624cc75d04fe3c8c0b62ce98de
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2> Shadow of the Tomb Raider: Definitive Edition</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download6.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <!-- box 7 -->
+                  <div class="box">
+                    <img src="https://i.ytimg.com/vi/6nX6Y2wSpcs/maxresdefault.jpg
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2>Red Dead Redemtion 2</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download7.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <!-- box 8 -->
+                  <div class="box">
+                    <img src="https://wallpapers.com/images/hd/poster-of-batman-arkham-knight-iphone-cw3rdp0ay9xw17a5.jpg
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2> Batman Arkham knights</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download8.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+       </section>
+
+
+ <!-- Action Games -->
+  <section class="trending container" id="trending">
+    <div class="heading">
+        <i class='bx bxs-flame' ></i>
+        <h2>Action Games</h2>
+    </div>
+    <!-- content  -->
+     <div class="trending-content swiper">
+        <div class="swiper-wrapper">
+            <!-- slide 1  -->
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="https://beebom.com/wp-content/uploads/2022/06/Marvels-Spider-Man-Remastered-and-Miles-Morales-are-Officially-Coming-to-PC.jpg" alt="image1">
+                    <div class="box-text">
+                        <h2>Marvels Spiderman Remastered</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download9.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- slide 2  -->
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="https://i.pinimg.com/736x/8e/ac/d1/8eacd1f4e7e4a129301e47797505789b.jpg" alt="image1">
+                    <div class="box-text">
+                        <h2>Halo Infinity</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download10.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- slide 3  -->
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="https://cdn2.steamgriddb.com/grid/5010f17a1b61f073ceb86a10fbc77580.png" alt="image1">
+                    <div class="box-text">
+                        <h2>Hitman 3</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download11.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- slide 4  -->
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="https://i.ytimg.com/vi/TZ_G6XiHoUA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAJTVdUB0woThOdnsKuqVBOiIk0IQ
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2>The witcher wild hunt</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download12.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- slide 5  -->
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="https://i.pinimg.com/736x/c8/c3/d6/c8c3d6ee293eeae47799393e88f6d1d1.jpg" alt="image1">
+                    <div class="box-text">
+                        <h2>MineCraft caves and cliffs</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download13.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+     </div>
+  </section>
+    </section>
+
+
+      <!-- Extra section  -->
+       <section class="new container" id="new">
+
+        <div class="heading">
+            <!-- <i class='bx bx-game' ></i> -->
+            <i class='bx bxs-game' ></i>
+            <h2>Explore More Games</h2>
+        </div>
+            <!-- content -->
+             <div class="new-content">
+                <!-- box 1 -->
+                <div class="box">
+                    <img src="https://myhotposters.com/cdn/shop/products/mL5981_1024x1024.jpg?v=1643974595
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2>Dying Light 2 Stay Human</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download1.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <!-- box 2 -->
+                  <div class="box">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202109/2821/SZRc7OMwGgv8lJXIOlYyuBU2.jpg
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2>God of War</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download2.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <!-- box 3 -->
+                  <div class="box">
+                    <img src="https://gamerheadquarters.com/hub/playstation/horizon/forbiddenwest.jpg" alt="image1">
+                    <div class="box-text">
+                        <h2>Horizon Forbidden West</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download3.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                  <!-- box 4 -->
+                  <div class="box">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNTFmN2M0MGMtMTI5Ny00NzRlLWFlZGYtZDM0N2VmOTUwYTdmXkEyXkFqcGc@.V1_FMjpg_UX1000.jpg
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2>Uncharted 4 Thiefs End</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download4.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <!-- box 5 -->
+                  <div class="box">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/f/ff/Assassin%27s_Creed_Valhalla_cover.jpg
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2> Assassin's Creed Valhalla</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download5.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <!-- box 6 -->
+                  <div class="box">
+                    <img src="https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s4-1200x1600-7ee40d6fa744_1200x1600-950cdb624cc75d04fe3c8c0b62ce98de
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2> Shadow of the Tomb Raider: Definitive Edition</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download6.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <!-- box 7 -->
+                  <div class="box">
+                    <img src="https://i.ytimg.com/vi/6nX6Y2wSpcs/maxresdefault.jpg
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2>Red Dead Redemtion 2</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download7.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <!-- box 8 -->
+                  <div class="box">
+                    <img src="https://wallpapers.com/images/hd/poster-of-batman-arkham-knight-iphone-cw3rdp0ay9xw17a5.jpg
+                    " alt="image1">
+                    <div class="box-text">
+                        <h2> Batman Arkham knights</h2>
+                        <h3>Action</h3>
+                        <div class="rating-download">
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <span>4.7</span>
+                            </div>
+                            <a href="download8.html" class="box-btn"><i class='bx bx-down-arrow-alt' ></i></a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+             <div class="next-page">
+                <a href="index.html">Back Page</a>
+             </div>
+       </section>
+
+
+     <!-- copyright -->
+<div class="copyright container">
+    <a href="#" class="logo">
+        <img src="UNREAL GAMES LOGO.png" alt="Unreal Games Logo" style="height: 40px;">
+    </a>
+    <p>&#169; All Right Reserved</p>
+</div>
+
+    <!-- link tojs -->
+     <script src="swiper-bundle.min.js"></script>
+     <script src="main.js"></script>
+     <script>
+        const images = [
+            '/image1.jpg',
+            '/image2.jpg',
+            '/image3.jpg',
+            '/image4.jpg',
+            '/image5.jpg'
+        ];
+        let currentImageIndex = 0;
+
+        const imageElements = document.querySelectorAll('.home img');
+
+        function updateImage() {
+            imageElements[currentImageIndex].classList.remove('active'); // Hide current image
+            currentImageIndex = (currentImageIndex + 1) % images.length; // Loop back to the first image
+            imageElements[currentImageIndex].classList.add('active'); // Show next image
+        }
+
+        // Change image every 10 seconds
+        setInterval(updateImage, 10000);
+    </script>
+</body>
+</html>
